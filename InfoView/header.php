@@ -51,26 +51,18 @@ $usuarioLogado = isset($_SESSION['idUsuario']); // Verifica se a sessão do usu�
                     <li class="nav-item">
                         <a class="nav-link active" href="index.php" title="Ir para a Página Inicial">Início</a>
                     </li>
-                    <?php if ($usuarioLogado): ?>
-                        <!-- Exibe estas opções apenas se o usuário estiver logado -->
-                        <li class="nav-item">
-                            <a class="nav-link active" href="formRelatorioINF3.php" title="Cadastrar Relatório">Cadastrar Relatório</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="formCurso.php" title="Cadastrar Curso">Cadastrar Curso</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="formDisciplina.php" title="Cadastrar Disciplina">Cadastrar Disciplina</a>
-                        </li>
-                    <?php else: ?>
-                        <!-- Exibe apenas estas opções se o usuário NÃO estiver logado -->
-                        <li class="nav-item">
-                            <a class="nav-link active" href="formLogin.php" title="Acessar o Sistema">Login</a>
-                        </li>
-                    <?php endif; ?>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cadastrar</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="formRelatorioINF3.php">Relatório</a></li>
+                            <li><a class="dropdown-item" href="formCurso.php">Curso</a></li>
+                            <li><a class="dropdown-item" href="formDisciplina.php">Disciplina</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="sobre.php" title="Sobre Nós">Sobre Nós</a>
                     </li>
+                
                 </ul>
             </div>
         </div>

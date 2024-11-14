@@ -30,12 +30,18 @@
         // Exibe os cursos em cards
         foreach ($cursos as $curso) {
         ?>
-        <div class="col-sm-3">
+        <div class="col-sm-3 mb-3">
             <div class="card" style="width:100%; height:100%;">
-                <img src="<?= htmlspecialchars($curso['urlCurso']) ?>" class="card-img-top" alt="<?= htmlspecialchars($curso['nomeCurso']) ?>" style="height: 200px; object-fit: cover;">
-                <div class="card-body">
+                <div class="card-body" style="height:100%">
+                <a href="ver_relatorios.php?idCurso=<?= $curso['idCurso'] ?>">
+                    <img src="<?= htmlspecialchars($curso['urlCurso']) ?>" class="card-img-top" alt="<?= htmlspecialchars($curso['nomeCurso']) ?>" style="height: 200px; object-fit: cover;">
+                </a>
+                </div>
+                <div class="card-body text-center">
                     <h4 class="card-title"><?= htmlspecialchars($curso['nomeCurso']) ?></h4>
-                    <a href="ver_relatorios.php?idCurso=<?= $curso['idCurso'] ?>" class="btn btn-danger" style="background-color:#DC143C;">Ver Relatórios</a>
+                    <div class='d-grid' style='border-size:border-box'>
+                        <a href="ver_relatorios.php?idCurso=<?= $curso['idCurso'] ?>" class="btn btn-danger" style="background-color:#DC143C;">Ver Relatórios</a>
+                    </div>
                 </div>
             </div>
         </div>

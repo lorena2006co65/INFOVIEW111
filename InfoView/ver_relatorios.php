@@ -58,7 +58,7 @@ if (isset($_GET['idCurso'])) {
             echo "<tr><th>Dia da Semana</th><th>Descrição</th></tr>";
 
             // Loop pelos dias da semana
-            foreach (['segunda', 'terca', 'quarta', 'quinta', 'sexta'] as $dia) {
+            foreach (['segunda', 'terça', 'quarta', 'quinta', 'sexta'] as $dia) {
                 echo "<tr>";
                 echo "<td>" . ucfirst($dia) . "</td>";
                 echo "<td>";
@@ -137,7 +137,7 @@ if (isset($_GET['idCurso'])) {
         if (!empty($semanas)) {
             exibirRelatoriosPorSemana($semanas);
         } else {
-            echo "<p>Nenhum relatório encontrado para os filtros aplicados.</p>";
+            echo "<div class='alert alert-warning text-center'>Nenhum relatório encontrado para os filtros aplicados.</div>";
         }
         ?>
     </div>
